@@ -94,3 +94,36 @@ def prime_factors(n):
         if n == 1:
             break
     return val
+
+@Memo
+def combine_prime_factors(a, b):
+    pf = []
+    pa = prime_factors(a)
+    pb = prime_factors(b)
+
+    x = 0
+    y = 0
+
+    print a, b, pa, pb
+    while x < len(pa) and y < len(pb):
+        ba, ea = pa[x]
+        bb, eb = pb[y]
+        print ba, ea, bb, eb
+        if ba == bb:
+            pf.append((ba, ea + eb))
+            x += 1
+            y += 1
+        elif ba < bb:
+            pf.append((ba, ea))
+            x += 1
+        else:
+            pf.append((bb, eb))
+            y += 1
+
+    if x < len(pa):
+        pf += pa[x:]
+    else:
+        pf += pb[y:]
+
+    prime_factors.cache[a * b,] = pf
+    return pf
