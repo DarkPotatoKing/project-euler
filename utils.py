@@ -82,7 +82,8 @@ def nCr(n, r):
 @Memo
 def prime_factors(n):
     val = []
-    for d in xrange(2, int(sqrt(n)) + 1):
+    limit = n + 1
+    for d in xrange(2, limit):
         if n % d == 0:
             e = 0
             while n % d == 0:
@@ -91,4 +92,5 @@ def prime_factors(n):
             val.append((d, e))
 
         if n == 1:
-            return val
+            break
+    return val
