@@ -71,8 +71,10 @@ def multiply(a, b):
     return a * b
 
 @Memo
-def nCr(n, k):
-    if k > n or k < 0:
+def nCr(n, r):
+    if r > n or r < 0:
         return 0
+    elif n == r or r == 0:
+        return 1
     else:
-        return factorial(n) / (factorial(k) * factorial(n - k))
+        return nCr(n - 1, r - 1) + nCr(n - 1, r)
