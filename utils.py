@@ -30,6 +30,6 @@ def multiply(a, b):
 
 def nCr(n, k):
     if k > n or k < 0:
-        return 0.0
+        return 0
     else:
-        return divide(factorial(n), factorial(k) * factorial(n - k))
+        return factorial(n) / (factorial(k) * factorial(n - k))
