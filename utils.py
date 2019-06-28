@@ -7,6 +7,16 @@ def average(ls):
 def divide(numerator, denominator):
     return float(numerator) / float(denominator)
 
+def divisors(n):
+    val = []
+    for d in xrange(1, int(sqrt(n)) + 1):
+        if n % d == 0:
+            e = n / d
+            val.append(d)
+            if d != e:
+                val.append(e)
+    return sorted(val)
+
 def factorial(n):
     if n < 0:
         raise StandardError('Factorial is not defined for negative numbers')
