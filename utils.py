@@ -104,11 +104,9 @@ def combine_prime_factors(a, b):
     x = 0
     y = 0
 
-    print a, b, pa, pb
     while x < len(pa) and y < len(pb):
         ba, ea = pa[x]
         bb, eb = pb[y]
-        print ba, ea, bb, eb
         if ba == bb:
             pf.append((ba, ea + eb))
             x += 1
