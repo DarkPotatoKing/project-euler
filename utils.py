@@ -1,5 +1,6 @@
 from math import sqrt, floor, ceil
 from itertools import combinations, permutations, product
+import re
 
 import collections
 import functools
@@ -66,6 +67,10 @@ def is_prime(n):
             return False
 
     return True
+
+def match(pattern, string):
+    string = str(string)
+    return re.match(pattern, string) != None
 
 def multiply(a, b):
     return a * b
