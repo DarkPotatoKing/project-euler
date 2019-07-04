@@ -33,7 +33,7 @@ class Memo(object):
       return functools.partial(self.__call__, obj)
 
 def average(ls):
-    return float(sum(ls)) / float(len(ls))\
+    return float(sum(ls)) / float(len(ls))
 
 def digits(num):
     return [int(c) for c in str(num)]
