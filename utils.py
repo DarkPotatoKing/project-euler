@@ -1,8 +1,8 @@
-from math import sqrt, floor, ceil
 from itertools import combinations, permutations, product
-import re
+from math import sqrt, floor, ceil
 
 import collections
+import re
 import functools
 
 class Memo(object):
