@@ -35,6 +35,9 @@ class Memo(object):
 def average(ls):
     return float(sum(ls)) / float(len(ls))
 
+def digit_sum(num):
+    return sum(digits(num))
+
 def digits(num):
     return [int(c) for c in str(num)]
 
