@@ -2,6 +2,7 @@ from fractions import Fraction
 from itertools import combinations, permutations, product
 from math import sqrt, floor, ceil
 from sympy import sieve
+from sympy.ntheory import isprime
 
 import collections
 import re
@@ -68,16 +69,8 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
-@Memo
 def is_prime(n):
-    if n < 2:
-        return False
-
-    for d in xrange(2, int(sqrt(n)) + 1):
-        if n % d == 0:
-            return False
-
-    return True
+    return isprime(n)
 
 def match(pattern, string):
     string = str(string)
