@@ -37,7 +37,7 @@ class Memo(object):
 def average(ls):
     return float(sum(ls)) / float(len(ls))
 
-def create_sieve(min_num = 1, max_num = 10**6):
+def prime_range(min_num = 1, max_num = 10**6):
     return [i for i in sieve.primerange(min_num, max_num)]
 
 def digit_sum(num):
