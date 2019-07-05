@@ -1,6 +1,7 @@
 from fractions import Fraction
 from itertools import combinations, permutations, product
 from math import sqrt, floor, ceil
+from sympy import sieve
 
 import collections
 import re
@@ -34,6 +35,9 @@ class Memo(object):
 
 def average(ls):
     return float(sum(ls)) / float(len(ls))
+
+def create_sieve(min_num = 1, max_num = 10**6):
+    return [i for i in sieve.primerange(min_num, max_num)]
 
 def digit_sum(num):
     return sum(digits(num))
