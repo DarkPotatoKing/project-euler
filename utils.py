@@ -3,6 +3,7 @@ from itertools import combinations, permutations, product
 from math import sqrt, floor, ceil
 from sympy import sieve
 from sympy.ntheory import isprime
+from copy import deepcopy
 
 import collections
 import re
