@@ -70,6 +70,15 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
+def is_even(n):
+    return n % 2 == 0
+
+def is_odd(n):
+    return n % 2 == 1
+
+def is_perfect_square(n):
+    return n == int(sqrt(n))**2
+
 def is_prime(n):
     return isprime(n)
 
